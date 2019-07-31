@@ -1,0 +1,108 @@
+.info {
+	margin-top: 60px;
+	.servises {
+		margin-top: 50px;
+		p {
+			font-size: 18px;
+			margin-top: 20px;
+		}
+		.description {
+			font-size: 32px;
+			font-family: $bold-font;
+			color: #000000;
+			text-transform: uppercase;
+			cursor: pointer;
+			margin-top: 0;
+			transition: .3s ease;
+			position: relative;
+			.bg-icon {
+				position: absolute;
+				top: 50%;
+				margin-top: -12px;
+				right: 0;
+				background: url("../img/show.png") no-repeat center;
+				width: 24px;
+				height: 24px;
+				transform: rotate(0deg);
+				transition: .3s ease;
+			}
+		}
+		.active {
+			.bg-icon {
+				transform: rotate(-45deg);
+				transition: .3s ease;
+			}
+		}
+	}
+	.place-block {
+		margin-top: 50px;
+		padding-right: 0;
+		p {
+			font-family: $bold-font;
+			color: #000000;
+			font-size: 24px;
+			margin-top: 30px;
+		}
+		.description {
+			text-transform: uppercase;
+			font-size: 32px;
+			margin-top: 0;
+		}
+		a {
+			color: #E60000;
+			font-size: 18px;
+			text-decoration: underline;
+		}
+		.address {
+			margin-top: 40px;
+			p {
+				font-size: 17px;
+				margin-top: 20px;
+			}
+		}
+	}
+	.map-block {
+		margin-top: 50px;
+		.location {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+		.city {
+			width: 50%;
+			background: #E2E2E2;
+			border-radius: 8px 0 0 8px;
+			transition: all .3s ease;
+			padding: 7px 0;
+			cursor: pointer;
+			&:last-child {
+				border-radius: 0 8px 8px 0;
+			}
+			p {
+				text-align: center;
+				font-size: 18px;
+				font-family: $bold-font;
+				color: #888888;
+			}
+		}
+		.active {
+			background: #323232;
+			transition: all .3s ease;
+			p {
+				color: #ffffff;
+			}
+		}
+		.map {
+			img {
+				width: 100%;
+				border-radius: 0 0 8px 8px;
+			}
+			.second-location {
+				display: none;
+			}
+		}
+	}
+	.hide-info {
+		display: none;
+	}
+}

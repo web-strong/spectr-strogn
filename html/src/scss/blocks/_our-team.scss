@@ -1,0 +1,90 @@
+.our-team {
+	margin-top: 70px;
+	.item {
+		margin: 0 15px;
+	}
+	.team_avatar {
+		position: relative;
+		padding-left: 0;
+		img {
+			width: 100%;
+			border-radius: 8px;
+		}
+		.name {
+			position: absolute;
+			top: 20px;
+			right: 40px;
+			p {
+				color: #ffffff;
+				text-transform: uppercase;
+				font-size: 18px;
+				font-family: $bold-font;
+			}
+		}
+	}
+	.team_description {
+		p {
+			color: #727272;
+			font-size: 16px;
+			&:first-child {
+				font-family: $bold-font;
+				font-size: 18px;
+				color: #000000;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.slick-dots {
+		list-style-type: none;
+		display: flex;
+		justify-content: flex-start;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -23px;
+		padding-left: 0;
+		li {
+			background: url("../img/circle.png") no-repeat center ;
+			margin-right: 7px;
+			&:last-child {
+				margin-right: 0;
+			}
+			button {
+				font-size: 0;
+				line-height: 0;
+				display: block;
+				width: 10px;
+				height: 10px;
+				padding: 5px;
+				cursor: pointer;
+				color: transparent;
+				border: 0;
+				outline: none;
+				background: transparent;
+			}
+		}
+		.slick-active {
+			background: url("../img/active.png");
+			width: 12px;
+			height: 12px;
+		}
+	}
+	.slick-arrow {
+		position: absolute;
+		border: none;
+		padding: 0;
+		outline: none;
+		top: 100%;
+	}
+	.slick-next {
+		right: 0;
+		background: url("../img/next-arrow.png") no-repeat;
+		width: 115px;
+		font-family: $bold-font;
+		font-size: 16px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #000000;
+		padding: 8px 0 9px 0;
+	}
+}

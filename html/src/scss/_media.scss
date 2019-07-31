@@ -1,0 +1,143 @@
+@media (min-width: 992px) {
+	.navbar-expand-lg {
+		justify-content: space-between!important;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.info .place-block p {
+		font-size: 17px;
+	}
+	.info .place-block a {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 991px) {
+	h2 {
+		font-size: 84px;
+	}
+	.main-info, .footer-social-links {
+		display: flex;
+		justify-content: space-between;
+		.servises {
+			width: 45%;
+		}
+	}
+	.footer-social-links {
+		p {
+			width: 45%;
+		}
+	}
+	.info .place-block .address, .info .map-block,
+	footer .right-info {
+		display: none;
+	}
+	.form-section .whatsapp-block p {
+		text-align: center;
+		margin-left: 0;
+	}
+	.form-section .whatsapp-block .link-block p {
+		text-align: left;
+	}
+	.our-team .slick-dots {
+		left: 40px;
+	}
+	.our-team .slick-next {
+		right: 15px;
+	}
+	.our-profile .slick-track {
+		padding-left: 30px;
+	}
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+	.container {
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 699px) {
+	h2 {
+		font-size: 60px;
+	}
+}
+@media screen and (max-width: 575px) {
+	.main-section .container .grey-block {
+		right: 50px;
+		left: 50px;
+	}
+	.our-team .slick-arrow {
+		top: 105%;
+	}
+	.our-team .slick-dots {
+		top: 108%;
+	}
+	.team_description {
+		padding: 0;
+		margin-top: 15px;
+	}
+	.our-technical-stack {
+		margin-top: 110px;
+	}
+	.form-section .form-group input,
+	.form-section .form-group textarea,
+	.form-section .btn-block {
+		max-width: 100%;
+	}
+	.form-section .whatsapp-block {
+		margin-top: 50px;
+	}
+	.form-section .whatsapp-block .link-block {
+		justify-content: space-between;
+	}
+	footer .border {
+		margin: 0;
+	}
+	.our-profile .item {
+		width: 290px;
+	}
+	.our-profile .slick-track {
+		padding-left: 0;
+	}
+	.slick-list {
+		padding-left: 41px;
+	}
+	.slick-slider {
+		padding: 0;
+	}
+}
+@media screen and (max-width: 477px) {
+	h1 {
+		font-size: 82px;
+		line-height: 92px;
+	}
+	h2 {
+		font-size: 42px;
+		line-height: 52px;
+	}
+	.main-info, .footer-social-links {
+		display: block;
+	}
+	.main-info .servises, .footer-social-links .servises,
+	.footer-social-links p {
+		width: 100%;
+	}
+	.our-technical-stack, .our-team, .our-profile,
+	.price {
+		margin-top: 40px;
+	}
+	.our-team {
+		margin-bottom: 100px;
+	}
+	h1 span:after {
+		right: -73px;
+		margin-top: -6px;
+		background: url(../img/line.png) no-repeat center;
+		background-size: contain;
+		width: 61px;
+		height: 12px;
+	}
+}
+@media screen and (max-width: 370px) {
+	h2 {
+		font-size: 36px;
+		line-height: 0;
+	}
+}

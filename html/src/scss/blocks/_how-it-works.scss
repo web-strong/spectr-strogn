@@ -1,0 +1,25 @@
+.how-it-works {
+	margin-top: 20px;
+	.how-it-works_block {
+		.text-description_main {
+			margin-top: 30px;
+			p {
+				margin-top: 20px;
+				text-align: center;
+			}
+		}
+	}
+	.how-it-works_title {
+		margin-top: 50px;
+		text-align: center;
+		h2 {
+			text-align: center;
+		}
+	}
+	.section-with-img_img-block {
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
