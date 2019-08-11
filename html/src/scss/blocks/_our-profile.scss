@@ -1,0 +1,34 @@
+.our-profile {
+	margin-top: 70px;
+	.slick-slider {
+		margin-top: 30px;
+	}
+	.slick-track {
+		padding-left: 50px;
+	}
+	.item {
+		margin: 0 15px;
+		outline: none!important;
+		.img-block {
+			overflow: hidden;
+			transform: skewX(-10deg);
+			position: relative;
+			.name-profile {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 15px;
+				text-align: center;
+				transform: skewX(10deg);
+				p {
+					color: #ffffff;
+					font-family: $bold-font;
+					font-size: 40px;
+				}
+			}
+		}
+		img	{
+			width: 100%;
+		}
+	}
+}

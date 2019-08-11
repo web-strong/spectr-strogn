@@ -1,0 +1,107 @@
+@import 'libs';
+@import 'fonts';
+// colors
+$body-background: #ffffff;
+
+// fonts
+$regular-font: 'Gotham Pro', sans-serif;
+$bold-font: 'Gotham Pro Bold', sans-serif;
+
+html {
+  	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	color: #333333;
+	font-size: 20px;
+	font-weight: 400;
+	background: $body-background;
+	font-family: $regular-font;
+}
+h1 {
+	font-family: $bold-font;
+	font-size: 120px;
+	line-height: 92px;
+	color: #000000;
+	text-align: left;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	span {
+		display: inline-block;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			right: -125px;
+			top: 50%;
+			margin-top: -8px;
+			background: url("../img/line.png") no-repeat center;
+			background-size: contain;
+			width: 94px;
+			height: 16px;
+		}
+	}
+}
+h2 {
+	font-family: $bold-font;
+	font-size: 120px;
+	line-height: 86px;
+	color: #000000;
+	text-align: left;
+	text-transform: uppercase;
+}
+h3 {
+	font-family: $bold-font;
+	font-size: 32px;
+	color: #000000;
+	margin-bottom: 0;
+	text-align: left;
+	text-transform: uppercase;
+}
+h4 {
+	font-family: $bold-font;
+	font-size: 24px;
+	text-transform: uppercase;
+	margin: 0;
+	color: #000000;
+}
+a {
+	color: inherit;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+ul {
+	margin: 0;
+	padding: 0 0 0 20px;
+	li {
+		color: #E60000;
+		p {
+			color: #000000;
+		}
+	}
+}
+p {
+	margin-bottom: 0;
+	color: #333333;
+}
+b {
+	font-weight: bold;
+}
+button:focus {
+	outline: none;
+}
+.toTop {
+	position: fixed;
+	bottom: 40px;
+	right: 200px;
+	cursor: pointer;
+	display: none;
+	z-index: 9999;
+}
+@import 'index';

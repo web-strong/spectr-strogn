@@ -1,0 +1,95 @@
+.form-section {
+	margin-top: 70px;
+	h3 {
+		max-width: 335px;
+	}
+	h4 {
+		color: #727272;
+		margin-top: 20px;
+	}
+	ul {
+		li {
+			margin-top: 10px;
+		}
+	}
+	.list-with-stack {
+		margin-top: 50px;
+	}
+	.form-group {
+		margin-top: 30px;
+		p {
+			margin-bottom: 10px;
+			color: #727272;
+			font-size: 14px;
+			span {
+				font-family: $bold-font;
+			}
+		}
+		input, textarea {
+			border: 1px solid #e5e5e5;
+			border-radius: 8px;
+			color: #727272;
+			font-size: 16px;
+			transition: all .3s ease;
+			padding: 7px 12px 7px 20px;
+			width: 100%;
+			max-width: 370px;
+			&:focus {
+				outline: none;
+				border: 1px solid #000000;
+				background: rgba(229, 229, 229, 0.5);
+			}
+		}
+	}
+	.btn-block {
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+		max-width: 370px;
+	}
+	.btn-send {
+		border: none;
+		outline: none;
+		background: #E60000;
+		border-radius: 10px 0px;
+		color: #ffffff;
+		align-items: center;
+		text-transform: uppercase;
+		cursor: pointer;
+		padding: 10px 47px;
+	}
+	.whatsapp-block {
+		text-align: center;
+		img {
+			margin-bottom: 50px;
+		}
+		p {
+			font-size: 24px;
+			color: #000000;
+			font-family: $bold-font;
+			text-align: left;
+			margin-left: 70px;
+		}
+		a {
+			font-size: 16px;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: #000000;
+			font-family: $bold-font;
+			border-bottom: 1px solid #000000;
+			padding-right: 35px;
+			background: url("../img/arrow.png") no-repeat center right;
+		}
+		.link-block {
+			display: flex;
+			justify-content: flex-start;
+			margin-top: 20px;
+			p {
+				color: #727272;
+				font-size: 18px;
+				font-family: $regular-font;
+				margin-right: 20px;
+			}
+		}
+	}
+}
