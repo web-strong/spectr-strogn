@@ -91,19 +91,19 @@ gulp.task('fonts-temp', function() {
 });
 
 
-
 // Watch
 gulp.task('watch', function() {
    	gulp.watch('src/scss/**/*.scss', gulp.series('scss-temp'));
 	gulp.watch('src/img/**/*', gulp.series('tinypng-temp'));
 	gulp.watch('src/js/main.js', gulp.series('scripts-temp'));
     gulp.watch('src/fonts/**/*', gulp.series('fonts-temp'));
+    // reload();
 });
 
 // Browser Sync
 gulp.task('browsersync', function() {
     browsersync.init({
-        proxy: 'specrtNew/temp'
+        proxy: 'localhost:3000/index.html'
     });
 });
 
@@ -111,7 +111,7 @@ gulp.task('browsersync', function() {
 // Default development
 gulp.task('default', gulp.series(
 	gulp.parallel('scss-temp', 'libs-temp', 'scripts-temp', 'tinypng-temp', 'fonts-temp'),
-	gulp.parallel('watch', 'browsersync')
+    gulp.parallel('watch', 'browsersync'),
 ));
 
 // Build
