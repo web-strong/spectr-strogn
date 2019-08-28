@@ -38,5 +38,141 @@ header {
 		width: 100%;
 		height: 100%;
 	}
-}
+	.menu-block {
+		display: block!important;
+		position: fixed;
+		list-style:none;
+		margin: 0;
+		box-sizing: border-box;
+		width: 440px;
+		background: #ffffff;
+		box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.07);
+		height: 100%;
+		top: 0;
+		right: -440px;
+		transition: all .3s;
+		z-index: 50;
+	}
+	.menu-block-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		.container-fluid {
+			display: none;
+		}
+	}
+	.active {
+		right: 0;
+	}
+	.social-icon_menu {
+		padding: 15px;
+	}
+	.social {
+		display: block;
+		width: 40px;
+		height: 40px;
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.dribbble {
+		background: url("../img/dribbble.png") no-repeat;
+		background-size: contain;
+		transition: .3s ease;
+		&:hover {
+			background: url("../img/dribbble-hover.png") no-repeat;
+			background-size: contain;
+		}
+	}
+	.behance {
+		background: url("../img/behance.png") no-repeat;
+		background-size: contain;
+		transition: .3s ease;
+		&:hover {
+			background: url("../img/behance-hover.png") no-repeat;
+			background-size: contain;
+		}
+	}
+	.instagram {
+		background: url("../img/instagram.png") no-repeat;
+		background-size: contain;
+		transition: .3s ease;
+		&:hover {
+			background: url("../img/instagram-hover.png") no-repeat;
+			background-size: contain;
+		}
+	}
+	.menu-logo, .close-btn-block {
+		padding: 22px 15px 18px 15px;
 
+	}
+	.close-btn-block {
+		text-align: right;
+		.close-menu-btn {
+			padding: 0;
+			outline: none;
+			height: 19px;
+			width: 19px;
+			border: 0;
+			background: url("../img/close.png") no-repeat right top;
+			background-size: contain;
+		}
+	}
+	.menu-information {
+		border-top: 1px solid #eeeeee;
+	}
+	.servises {
+		margin-top: 0;
+		p {
+			margin-top: 10px;
+			padding-left: 5px;
+		}
+		.description {
+			cursor: none;
+			font-size: 24px;
+			text-transform: none;
+			background: url("../img/header-line.png") no-repeat left bottom;
+			margin-top: 20px;
+			padding-left: 0;
+		}
+		.choose-city {
+			cursor: pointer;
+			font-weight: 600;
+			position: relative;
+			max-width: 110px;
+			.bg-icon {
+				position: absolute;
+				top: 50%;
+				margin-top: -12px;
+				right: 0;
+				background: url("../img/show-description.png") no-repeat center;
+				background-size: contain;
+				width: 24px;
+				height: 24px;
+			}
+		}
+		.active {
+			.bg-icon {
+				transform: rotate(0);
+			}
+		}
+	}
+	.menu-copyright {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 20px;
+		border-top: 1px solid #eeeeee;
+		p {
+			font-size: 14px;
+			color: #727272;
+		}
+		a {
+			font-size: 16px;
+			color: #E60000;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+}

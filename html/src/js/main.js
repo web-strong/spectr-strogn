@@ -46,4 +46,16 @@ $(document).ready(function() {
         $(".city").removeClass("active");
         $(this).addClass("active");
     });
+    $(".navbar-toggler").click(function () {
+        $(".menu-block").addClass("active");
+    });
+    $(document).mouseup(function (e) {
+        var div = $(".menu-block");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            div.removeClass("active");
+        }
+        $(".close-menu-btn").click(function () {
+            div.removeClass("active");
+        })
+    });
 });

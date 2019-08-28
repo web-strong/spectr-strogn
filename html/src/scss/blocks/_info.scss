@@ -1,39 +1,5 @@
 .info {
 	margin-top: 60px;
-	.servises {
-		margin-top: 50px;
-		p {
-			font-size: 18px;
-			margin-top: 20px;
-		}
-		.description {
-			font-size: 32px;
-			font-family: $bold-font;
-			color: #000000;
-			text-transform: uppercase;
-			cursor: pointer;
-			margin-top: 0;
-			transition: .3s ease;
-			position: relative;
-			.bg-icon {
-				position: absolute;
-				top: 50%;
-				margin-top: -12px;
-				right: 0;
-				background: url("../img/show.png") no-repeat center;
-				width: 24px;
-				height: 24px;
-				transform: rotate(0deg);
-				transition: .3s ease;
-			}
-		}
-		.active {
-			.bg-icon {
-				transform: rotate(-45deg);
-				transition: .3s ease;
-			}
-		}
-	}
 	.place-block {
 		margin-top: 50px;
 		padding-right: 0;
@@ -104,5 +70,42 @@
 	}
 	.hide-info {
 		display: none;
+	}
+}
+.servises {
+	margin-top: 50px;
+	p {
+		font-size: 18px;
+		margin-top: 20px;
+	}
+	.description {
+		font-size: 32px;
+		font-family: $bold-font;
+		color: #000000;
+		text-transform: uppercase;
+		cursor: pointer;
+		margin-top: 0;
+		transition: .3s ease;
+		position: relative;
+		.bg-icon {
+			position: absolute;
+			top: 50%;
+			margin-top: -12px;
+			right: 0;
+			background: url("../img/show.png") no-repeat center;
+			width: 24px;
+			height: 24px;
+			transform: rotate(0deg);
+			transition: .3s ease;
+		}
+	}
+	.hide-info {
+		display: none;
+	}
+	.active {
+		.bg-icon {
+			transform: rotate(-45deg);
+			transition: .3s ease;
+		}
 	}
 }

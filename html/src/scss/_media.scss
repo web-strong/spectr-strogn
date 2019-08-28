@@ -47,6 +47,40 @@
 	.our-profile .slick-track {
 		padding-left: 30px;
 	}
+	header .menu-block {
+		left: 0;
+		right: 0;
+		height: 0;
+		width: 100%;
+		overflow: hidden;
+		padding: 0;
+	}
+	header .active {
+		height: 100%;
+	}
+	header .menu-block-container .container-fluid {
+		display: block;
+	}
+	.menu-bottom-link {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	header .social {
+		display: inline-block;
+		margin-bottom: 0;
+		margin-right: 30px;
+		 &:last-child {
+			 margin-right: 0;
+		 }
+	}
+	header .social-icon_menu {
+		display: flex;
+		justify-content: center;
+	}
+	header .menu-copyright {
+		display: flex;
+	}
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
 	.container {
@@ -139,5 +173,8 @@
 	h2 {
 		font-size: 36px;
 		line-height: 0;
+	}
+	header .menu-copyright {
+		padding: 10px 5px;
 	}
 }
