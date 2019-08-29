@@ -1,10 +1,16 @@
 $(document).ready(function() {
+
+    var arrow = '<img src="./img/arrow-right.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
+        rectangleBackground = '<img src="./img/rectangle-horizontal.svg" class="rectangle animated delay-1s" data-animation="slideInRight">',
+        text = '<span class="animated delay-1s" data-animation="fadeIn">next</span>',
+        btnNext = '<button type="button" class="slick-arrow slick-next ">' + arrow + text + rectangleBackground + '</button>';
+
     $(".team-slider").slick({
         infinite: true,
         slidesToShow: 1,
         dots: true,
         prevArrow: '<button type="button" class="slick-arrow slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-arrow slick-next">next</button>',
+        nextArrow: btnNext,
         autoplay: true,
         autoplaySpeed: 2000
     });
@@ -46,4 +52,60 @@ $(document).ready(function() {
         $(".city").removeClass("active");
         $(this).addClass("active");
     });
+
+    var windowWidth = $(window).outerWidth(true);
+
+    $(window).scroll(function (e) {
+        e.preventDefault();
+
+        runAnimation();
+    });﻿
+
+    runAnimation();
+
+    function runAnimation () {
+
+        $('.animated').each(function () {
+
+            var item= $(this),
+                elemPos = item.offset().top,
+                offsetTop = 0;
+
+            if (windowWidth > 1365) {
+                offsetTop = 700;
+            } else if (windowWidth > 767) {
+                offsetTop = 600;
+            } else if (windowWidth > 319) {
+                offsetTop = 450;
+            }
+
+            var topOfWindow = $(window).scrollTop() + offsetTop;
+
+            if (elemPos < topOfWindow || topOfWindow > $(document).height() - 400) {
+
+                item.addClass(item.data('animation'));
+
+                if (item.hasClass('typing-text') && !item.hasClass('animated-show')) {
+                    animateText(item,1);
+                }
+                item.addClass('animated-show');
+            }
+        });
+    }
+
+    function animateText(item, index) {
+
+        var text = item.data('text'),
+            subText = text.substring(0, index++);
+
+        item.text(subText);
+
+        if (index <= text.length) {
+            setTimeout(function () {
+                animateText(item, index);
+            }, 100);
+        } else {
+            index = 0;
+        }
+    }
 });

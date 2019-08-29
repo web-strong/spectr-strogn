@@ -78,7 +78,7 @@
 	}
 	.slick-next {
 		right: 0;
-		background: url("../img/next-arrow.png") no-repeat;
+		background: transparent;
 		width: 115px;
 		font-family: $bold-font;
 		font-size: 16px;
@@ -86,5 +86,19 @@
 		text-transform: uppercase;
 		color: #000000;
 		padding: 8px 0 9px 0;
+		
+		& .arrow {
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(-90deg);
+		}
+		
+		& .rectangle {
+			position: absolute;
+			top: 0;
+			left: 5px;
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
 	}
 }

@@ -8,100 +8,189 @@ $regular-font: 'Gotham Pro', sans-serif;
 $bold-font: 'Gotham Pro Bold', sans-serif;
 
 html {
-  	box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
+
 body {
-	color: #333333;
-	font-size: 20px;
-	font-weight: 400;
-	background: $body-background;
-	font-family: $regular-font;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 400;
+    background: $body-background;
+    font-family: $regular-font;
+    overflow-x: hidden;
 }
+
 h1 {
-	font-family: $bold-font;
-	font-size: 120px;
-	line-height: 92px;
-	color: #000000;
-	text-align: left;
-	text-transform: uppercase;
-	margin-bottom: 30px;
-	span {
-		display: inline-block;
-		position: relative;
-		&:after {
-			content: '';
-			position: absolute;
-			right: -125px;
-			top: 50%;
-			margin-top: -8px;
-			background: url("../img/line.png") no-repeat center;
-			background-size: contain;
-			width: 94px;
-			height: 16px;
-		}
-	}
+    font-family: $bold-font;
+    font-size: 120px;
+    line-height: 92px;
+    color: #000000;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    
+    span {
+        display: inline-block;
+        position: relative;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            right: -125px;
+            top: 50%;
+            margin-top: -8px;
+            background: url("../img/line.png") no-repeat center;
+            background-size: contain;
+            width: 94px;
+            height: 16px;
+        }
+    }
 }
+
 h2 {
-	font-family: $bold-font;
-	font-size: 120px;
-	line-height: 86px;
-	color: #000000;
-	text-align: left;
-	text-transform: uppercase;
+    font-family: $bold-font;
+    font-size: 120px;
+    line-height: 86px;
+    color: #000000;
+    text-align: left;
+    text-transform: uppercase;
 }
+
 h3 {
-	font-family: $bold-font;
-	font-size: 32px;
-	color: #000000;
-	margin-bottom: 0;
-	text-align: left;
-	text-transform: uppercase;
+    font-family: $bold-font;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 0;
+    text-align: left;
+    text-transform: uppercase;
 }
+
 h4 {
-	font-family: $bold-font;
-	font-size: 24px;
-	text-transform: uppercase;
-	margin: 0;
-	color: #000000;
+    font-family: $bold-font;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #000000;
 }
+
 a {
-	color: inherit;
-	&:hover {
-		color: inherit;
-		text-decoration: none;
-	}
+    color: inherit;
+    
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
 }
+
 ul {
-	margin: 0;
-	padding: 0 0 0 20px;
-	li {
-		color: #E60000;
-		p {
-			color: #000000;
-		}
-	}
+    margin: 0;
+    padding: 0 0 0 20px;
+    
+    li {
+        color: #E60000;
+        
+        p {
+            color: #000000;
+        }
+    }
 }
+
 p {
-	margin-bottom: 0;
-	color: #333333;
+    margin-bottom: 0;
+    color: #333333;
 }
+
 b {
-	font-weight: bold;
+    font-weight: bold;
 }
+
 button:focus {
-	outline: none;
+    outline: none;
 }
+
 .toTop {
-	position: fixed;
-	bottom: 40px;
-	right: 200px;
-	cursor: pointer;
-	display: none;
-	z-index: 9999;
+    position: fixed;
+    bottom: 40px;
+    right: 200px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
 }
+
+.animated {
+    opacity: 0;
+}
+
+.animated-show {
+    opacity: 1;
+}
+
+.animation-fade-right {
+    animation-name: fadeIn, slideInRight;
+}
+
+.animation-fade-bottom {
+    animation-name: fadeIn, slideInDown;
+}
+
+.animation-fade-top {
+    animation-name: fadeIn, slideInUp;
+}
+
+.animation-zoom-flip {
+    animation-name: zoom-flip;
+    animation-duration: 2.5s;
+}
+
+.typing-text-css {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing;
+    animation-duration: 5s;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 1;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-flip {
+    from {
+        transform: translate3d(-50%, 0, 0) scale3d(0.1, 0.1, 0.1);
+        opacity: 0;
+        transition: opacity .3s ease-in;
+    }
+    30% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    }
+    60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    }
+    70% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    }
+    90% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    to {
+        transform: perspective(400px);
+    }
+}
+
 @import 'index';
