@@ -144,19 +144,20 @@
 @media (min-width: 768px) {
 	.our-profile .item {
 		.img-block .name-profile p {
-			font-size: 34px;
+			font-size: 26px;
 		}
 	}
 }
 
 @media (min-width: 1024px) {
 	.our-profile .item .img-block .name-profile p {
-		font-size: 32px;
+		margin-left: 5%;
+		font-size: 26px;
 	}
 }
 
 @media (min-width: 1366px) {
 	.our-profile .item .img-block .name-profile p {
-		font-size: 40px;
+		font-size: 30px;
 	}
 }
