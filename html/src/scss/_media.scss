@@ -70,7 +70,7 @@
 		top: 108%;
 	}
 	.team_description {
-		padding: 0;
+		padding: 0 20px 0 0;
 		margin-top: 15px;
 	}
 	.our-technical-stack {
@@ -97,7 +97,7 @@
 		padding-left: 0;
 	}
 	.slick-list {
-		padding-left: 41px;
+		padding-left: 21px;
 	}
 	.slick-slider {
 		padding: 0;
@@ -139,5 +139,24 @@
 	h2 {
 		font-size: 36px;
 		line-height: 0;
+	}
+}
+@media (min-width: 768px) {
+	.our-profile .item {
+		.img-block .name-profile p {
+			font-size: 34px;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.our-profile .item .img-block .name-profile p {
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 1366px) {
+	.our-profile .item .img-block .name-profile p {
+		font-size: 40px;
 	}
 }

@@ -7,23 +7,25 @@
 		padding-left: 50px;
 	}
 	.item {
-		margin: 0 15px;
+		padding: 0 15px;
 		outline: none!important;
 		.img-block {
 			overflow: hidden;
-			transform: skewX(-10deg);
 			position: relative;
+			transform: skewX(-10deg);
 			.name-profile {
 				position: absolute;
 				left: 0;
 				right: 0;
 				bottom: 15px;
-				text-align: center;
 				transform: skewX(10deg);
+				text-align: center;
 				p {
+					max-width: 85%;
+					margin-left: 5%;
 					color: #ffffff;
 					font-family: $bold-font;
-					font-size: 40px;
+					font-size: 26px;
 				}
 			}
 		}

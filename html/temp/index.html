@@ -8,8 +8,15 @@
     <link href="./css/animate.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
 </head>
-<body>
+<body class="no-scroll">
 <main>
+
+    <div class="preloader" style="position: fixed;left: 0;top: 0;bottom: 0;right: 0;display: flex;align-items: center;justify-content: center;opacity: 1;z-index: 10;">
+        <div style=" position: relative;width: 50%;margin: 0 auto;text-align: center;">
+            <img src="./img/logo.png" alt="">
+            <p class="percent" style=" margin-top: 10px;font-family: 'Gotham Pro Bold', 'Arial', sans-serif;color: #727272;font-size: 16px;"></p>
+        </div>
+    </div>
     <header id="top">
         <div class="container">
             <div class="row">
@@ -48,23 +55,23 @@
     <section class="main-section">
         <div class="container">
             <div class="row">
-                <div class="col-12 main-section_title animated animation-fade-right delay-1s">
+                <div class="col-12 main-section_title animated delay-1s" data-animation="animation-fade-right">
                     <h1><span>web</span></h1>
                     <h2>development</h2>
                 </div>
                 <div class="col-12 main-section_description">
-                    <p class="animated typing-text" data-animation="" data-text="We made incrediable web-sites">We made incrediable web-sites</p>
+                    <p class="animated delay-2s" data-animation="typing-text" data-text="We made incrediable web-sites"></p>
                 </div>
                 <div class="col-12 btn-next">
                     <a href="#" class="">
-                        <img class="arrow animated animation-fade-bottom delay-1s" src="./img/arrow.svg" alt="">
-                        <span class="animated fadeIn delay-2s">Scroll down</span>
-                        <img class="rectangle animated animation-fade-top delay-1s" src="./img/rectangle-vertical.svg"
+                        <img class="arrow animated delay-1s" data-animation="animation-fade-bottom" src="./img/arrow.svg" alt="">
+                        <span class="animated delay-2s" data-animation="fadeIn">Scroll down</span>
+                        <img class="rectangle animated delay-1s" data-animation="animation-fade-top" src="./img/rectangle-vertical.svg"
                             alt="">
                     </a>
                 </div>
             </div>
-            <div class="grey-block animated fadeIn"></div>
+            <div class="grey-block animated" data-animation="fadeIn"></div>
         </div>
     </section>
     <section class="our-technical-stack">
@@ -73,7 +80,7 @@
                 <div class="col-12 our-technical-stack_title">
                     <h3 class="animated " data-animation="animation-fade-right">OUR TECHNICAL STACK</h3>
                 </div>
-                <div class="col-lg-3 col-sm-6 list-with-stack">
+                <div class="col-lg-3 col-sm-6 list-with-stack stack-technologies">
                     <h4 class="animated" data-animation="fadeIn">frontend</h4>
                     <ul>
                         <li>
@@ -93,7 +100,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-sm-6 list-with-stack">
+                <div class="col-lg-3 col-sm-6 list-with-stack stack-technologies">
                     <h4 class="animated" data-animation="fadeIn">backend</h4>
                     <ul>
                         <li><p class="animated" data-animation="animation-zoom-flip">Yi2</p></li>
@@ -223,7 +230,7 @@
                     </div>
                     <div class="item animated" data-animation="fadeIn">
                         <div class="img-block">
-                            <img src="./img/1.png" alt="">
+                            <img src="./img/2.png" alt="">
                             <div class="name-profile">
                                 <p>Ecommerce</p>
                             </div>
@@ -231,7 +238,7 @@
                     </div>
                     <div class="item animated" data-animation="fadeIn">
                         <div class="img-block">
-                            <img src="./img/1.png" alt="">
+                            <img src="./img/3.png" alt="">
                             <div class="name-profile">
                                 <p>Social Media</p>
                             </div>
@@ -308,7 +315,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 title">
-                    <h3 class="animated" data-animation="slideInRight">Is it you are looking for?</h3>
+                    <h3 class="animated" data-animation="slideInRight">Is it us you are looking for?</h3>
                     <h4 class="animated" data-animation="typing-text" data-text="Drop as a line">Drop as a line</h4>
                 </div>
                 <div class="col-lg-6 col-sm-6 form-block">
@@ -383,19 +390,13 @@
                 </div>
                 <div class="col-lg-6 map-block animated delay-1s" data-animation="fadeIn">
                     <div class="location">
-                        <div class="city active">
-                            <p>Moscow</p>
-                        </div>
                         <div class="city">
                             <p>Kiev</p>
                         </div>
                     </div>
                     <div class="map">
                         <div class="first-location">
-                            <img src="./img/map.png" alt="">
-                        </div>
-                        <div class="second-location">
-                            <img src="./img/map.png" alt="">
+                            <img src="./img/map.svg" alt="">
                         </div>
                     </div>
                 </div>

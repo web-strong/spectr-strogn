@@ -67,17 +67,14 @@
 			display: flex;
 			justify-content: center;
 			width: 100%;
+			border-radius: 8px 8px 0 0;
+			overflow: hidden;
 		}
 		.city {
-			width: 50%;
+			width: 100%;
 			background: #E2E2E2;
-			border-radius: 8px 0 0 8px;
 			transition: all .3s ease;
 			padding: 7px 0;
-			cursor: pointer;
-			&:last-child {
-				border-radius: 0 8px 8px 0;
-			}
 			p {
 				text-align: center;
 				font-size: 18px;
@@ -93,12 +90,13 @@
 			}
 		}
 		.map {
+			border-radius: 0 0 8px 8px;
+			overflow: hidden;
 			img {
 				width: 100%;
-				border-radius: 0 0 8px 8px;
 			}
-			.second-location {
-				display: none;
+			.first-location {
+				display: flex;
 			}
 		}
 	}
