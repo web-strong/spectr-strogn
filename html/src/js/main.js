@@ -26,7 +26,7 @@ $(document).ready(function () {
         loadedImg++;
 
         if (progress >= 100 || loadedImg == imagesCount) {
-            // progress = 100;
+            progress = 100;
             preloader.delay(500).fadeOut('slow');
             body.css('overflow', '');
         }
