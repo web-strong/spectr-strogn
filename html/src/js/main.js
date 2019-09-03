@@ -3,10 +3,12 @@ $(document).ready(function () {
     var preloader = $('.preloader'),
         progressText = $('.preloader .percent'),
         imagesCount = $('img').length,
+        html = $('html'),
         body = $('body'),
         percent = Math.floor(100 / imagesCount),
         progress = 0,
         loadedImg = 0;
+
 
     if (imagesCount > 0) {
         preloader.css('background', '#fff');
@@ -33,6 +35,21 @@ $(document).ready(function () {
         progressText.text(progress + '%');
     }
 
+    $('.navbar-toggler').on('click', function () {
+
+        $(this).toggleClass('open');
+
+        if ($(window).outerWidth() < 1023) {
+            html.toggleClass('no-scroll');
+            body.toggleClass('no-scroll');
+        }
+
+        // disable scrolling in iOS mobile devices
+        if ($('body').hasClass('no-scroll')) {
+            $('body').on('touchmove', function (e) { e.preventDefault()});
+        }
+    });
+
     var arrow = '<img src="./img/arrow-right.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
         rectangleBackground = '<img src="./img/rectangle-horizontal.svg" class="rectangle animated delay-1s" data-animation="slideInRight">',
         text = '<span class="animated delay-1s" data-animation="fadeIn">next</span>',
@@ -44,16 +61,16 @@ $(document).ready(function () {
         dots: true,
         prevArrow: '<button type="button" class="slick-arrow slick-prev"></button>',
         nextArrow: btnNext,
-        // autoplay: true,
-        // autoplaySpeed: 2000
+        autoplay: true,
+        autoplaySpeed: 2000
     });
     $('.our-profile_slider').slick({
         infinite: false,
         slidesToShow: 3,
         dots: false,
         arrows: false,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 991,
@@ -93,6 +110,8 @@ $(window).on('load', function () {
         runAnimation();
     });﻿
 
+    $('select').styler();
+
     runAnimation();
 
     function runAnimation () {
@@ -107,7 +126,7 @@ $(window).on('load', function () {
                 offsetTop = 700;
             }
             else if (windowWidth > 767) {
-                offsetTop = 600;
+                offsetTop = 800;
             }
             else if (windowWidth > 319) {
                 offsetTop = 450;

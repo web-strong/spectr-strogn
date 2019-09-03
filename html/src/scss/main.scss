@@ -2,9 +2,11 @@
 @import 'fonts';
 // colors
 $body-background: #ffffff;
+$accent-primary: #E60000;
 
 // fonts
 $regular-font: 'Gotham Pro', sans-serif;
+$medium-font: 'Gotham Pro Medium', sans-serif;
 $bold-font: 'Gotham Pro Bold', sans-serif;
 
 html {
@@ -93,7 +95,7 @@ ul {
     padding: 0 0 0 20px;
     
     li {
-        color: #E60000;
+        color: $accent-primary;
         
         p {
             color: #000000;
@@ -121,6 +123,32 @@ button:focus {
     cursor: pointer;
     display: none;
     z-index: 9999;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.accent-color {
+    color: $accent-primary;
+}
+
+.hide-info {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .animated {

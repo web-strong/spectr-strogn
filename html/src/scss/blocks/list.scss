@@ -1,0 +1,56 @@
+
+.list {
+    padding-left: 0;
+}
+
+.list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px 20px 50px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+    opacity: .4;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 10px;
+        background-image: url("../img/message.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    & .name {
+        width: 25%;
+        color: #000000;
+        font-family: $medium-font;
+        font-size: 16px;
+    }
+    
+    & .text {
+        color: #000000;
+        font-size: 16px;
+    }
+}
+
+.list-item-accent {
+    background-color: #EDEDED;
+    border-bottom: 1px solid $accent-primary;
+    border-top: 1px solid $accent-primary;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    
+    &::before {
+        background-image: url("../img/message-active.svg");
+    }
+    
+    & .name {
+        color: $accent-primary;
+    }
+}

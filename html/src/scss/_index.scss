@@ -1,6 +1,7 @@
 @import 'slick';
 @import 'blocks/footer';
 @import 'blocks/header';
+@import 'blocks/main-nav';
 @import 'blocks/main-section';
 @import 'blocks/stack';
 @import 'blocks/our-team';
@@ -8,5 +9,10 @@
 @import 'blocks/our-profile';
 @import 'blocks/form-section';
 @import 'blocks/info';
+@import 'blocks/btn';
+@import 'blocks/form';
+@import 'blocks/select';
+@import 'blocks/modal';
+@import 'blocks/list';
 
 @import '_media';

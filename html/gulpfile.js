@@ -50,6 +50,7 @@ gulp.task('tinypng-temp', function () {
 gulp.task('libs-build', function() {
 	return gulp.src(['node_modules/jquery/dist/jquery.min.js',
 					 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+					 'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
 					 'src/js/sly.min.js',
 					 'src/js/slick.min.js'])
 		.pipe(concat('libs.min.js'))
@@ -58,6 +59,7 @@ gulp.task('libs-build', function() {
 gulp.task('libs-temp', function() {
 	return gulp.src(['node_modules/jquery/dist/jquery.min.js',
 					 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+					 'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
 					 'src/js/slick.min.js',
 					 'src/js/sly.min.js'])
 		.pipe(concat('libs.min.js'))

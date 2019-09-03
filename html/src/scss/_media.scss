@@ -57,6 +57,10 @@
 	h2 {
 		font-size: 60px;
 	}
+	
+	.our-technical-stack .stack-technologies {
+		margin-top: 25px;
+	}
 }
 @media screen and (max-width: 575px) {
 	.main-section .container .grey-block {
@@ -106,11 +110,11 @@
 @media screen and (max-width: 477px) {
 	h1 {
 		font-size: 82px;
-		line-height: 92px;
+		line-height: 82px;
 	}
 	h2 {
 		font-size: 42px;
-		line-height: 52px;
+		line-height: 42px;
 	}
 	.main-info, .footer-social-links {
 		display: block;
@@ -121,10 +125,10 @@
 	}
 	.our-technical-stack, .our-team, .our-profile,
 	.price {
-		margin-top: 40px;
+		margin-top: 70px;
 	}
 	.our-team {
-		margin-bottom: 100px;
+		margin-bottom: 140px;
 	}
 	h1 span:after {
 		right: -73px;
@@ -147,9 +151,64 @@
 			font-size: 26px;
 		}
 	}
+	
+	.modal-text,
+	.modal-sub-title {
+		width: 70%;
+		margin: 0 auto 10px;
+	}
+	
+	header .header-menu {
+		justify-content: space-between;
+		padding-left: 0;
+	}
+	
+	.navbar-footer {
+		flex-wrap: nowrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 20px 10px;
+		border-top: 1px solid #EEEEEE;
+		
+		& .copyright {
+			width: 30%;
+			margin-right: 7%;
+		}
+	}
+	
+	.navbar-collapse {
+		
+		& .navbar-social {
+			width: 30%;
+			order: inherit;
+			margin-bottom: 0;
+			margin-right: auto;
+			padding: 0;
+			border-bottom: 0;
+		}
+	}
+	
+	.navbar-collapse.show {
+		height: 92vh;
+		right: -40px;
+		
+		& .row {
+			height: 92vh;
+		}
+	}
 }
 
 @media (min-width: 1024px) {
+	
+	.modal-content {
+		padding: 70px 75px 10px;
+	}
+	
+	.navbar-toggler {
+		margin-left: 25px;
+	}
+	
 	.our-profile .item .img-block .name-profile p {
 		margin-left: 5%;
 		font-size: 26px;
@@ -157,7 +216,16 @@
 }
 
 @media (min-width: 1366px) {
+	
 	.our-profile .item .img-block .name-profile p {
 		font-size: 30px;
+	}
+	
+	header {
+		border-bottom: none;
+		
+		& .header-menu {
+			padding-right: 0;
+		}
 	}
 }
