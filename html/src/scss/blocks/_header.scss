@@ -7,11 +7,16 @@ header {
 		align-items: center;
 		justify-content: flex-end;
 	}
-	.navbar {
-		padding: 0;
-		min-width: 60px;
-		height: 100%;
+	.header-block {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
 	}
+	//.navbar {
+	//	padding: 0;
+	//	min-width: 60px;
+	//	height: 100%;
+	//}
 	.navbar-toggler {
 		display: block;
 		position: relative;
