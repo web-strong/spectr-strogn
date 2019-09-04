@@ -28,7 +28,7 @@ $(document).ready(function () {
 
         if (progress >= 100 || loadedImg == imagesCount) {
             progress = 100;
-            preloader.delay(500).fadeOut('slow');
+            preloader.delay(600).hide();
             body.css('overflow', '');
             body.removeClass('no-scroll');
         }

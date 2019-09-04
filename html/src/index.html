@@ -13,7 +13,7 @@
 <body>
 
 <div class="preloader"
-    style="position: fixed;left: 0;top: 0;bottom: 0;right: 0;display: flex;align-items: center; background-color: #fff;justify-content: center;opacity: 1;z-index: 10;">
+    style="position: fixed;left: 0;top: 0;bottom: 0;right: 0;display: flex;align-items: center; background-color: #fff;justify-content: center;opacity: 1;z-index: 30;">
     <div style=" position: relative;width: 50%;margin: 0 auto;text-align: center;">
         <div class="preloader-img logo">
             <img src="./img/logo.svg" alt="">
@@ -27,14 +27,14 @@
     <header id="top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-6 logo animated fadeIn">
+                <div class="col-lg-6 col-6 logo animated" data-animation="fadeIn">
                     <a href="/">
                         <img src="./img/logo.svg" alt="">
                     </a>
                 </div>
-                <div class="col-lg-6 col-6 header-menu">
+                <div class="col-lg-6 col-6 header-menu animated delay-2s" data-animation="fadeIn">
                     <div class="header-block">
-                        <form action="" class="animated fadeIn">
+                        <form action="" class="animated">
                             <select class="select-language " name="">
                                 <option class="select-option select-english" value="" selected>
                                     English
@@ -440,7 +440,7 @@
                     <div class="link-block">
                         <p class="animated" data-animation="typing-text"
                             data-text="Chat with our specialist">Chat with our specialist</p>
-                        <a href="#" class="animated delay-1s" data-animation="fadeIn">Whats App</a>
+                        <a href="#" class="animated delay-2s" data-animation="fadeIn">Whats App</a>
                     </div>
                 </div>
             </div>
