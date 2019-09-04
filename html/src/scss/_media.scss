@@ -202,7 +202,7 @@
 @media (min-width: 1024px) {
 	
 	.modal-content {
-		padding: 70px 75px 10px;
+		padding: 40px 75px 10px;
 	}
 	
 	.navbar-toggler {
@@ -224,8 +224,77 @@
 	header {
 		border-bottom: none;
 		
+		& .container {
+			position: relative;
+		}
+		
 		& .header-menu {
+			position: absolute;
+			right: -10px;
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: flex-end;
 			padding-right: 0;
 		}
+	}
+	
+	.navbar-collapse {
+		top: 0;
+		right: -13vh;
+		width: 0;
+		overflow-y: hidden;
+	}
+	
+	.navbar-collapse.show {
+		top: 0;
+		right: -13vh;
+		width: 30vw;
+		height: 100vh;
+		
+		& .row {
+			flex-direction: row;
+			
+			& h4 {
+				margin-top: 0;
+			}
+			
+			& .btn-close {
+				margin-left: 0;
+			}
+			
+			& > div:first-child {
+				flex-direction: column;
+				padding-left: 15px;
+			}
+		}
+		
+		& .navbar-footer {
+			width: 100%;
+			padding: 20px 0;
+			
+			& .copyright {
+				width: auto;
+			}
+		}
+	}
+	
+	.navbar-footer .navbar-social {
+		display: none;
+	}
+	
+	.navbar-social {
+		flex-direction: column;
+		margin-top: 30px;
+		
+		& a {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (min-width:  1600px) {
+	
+	.modal-content {
+		padding: 70px 75px 10px;
 	}
 }

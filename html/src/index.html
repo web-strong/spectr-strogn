@@ -8,6 +8,7 @@
     <link href="./css/animate.css" rel="stylesheet">
     <link href="./css/jquery.formstyler.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.ico" />
 </head>
 <body>
 
@@ -32,17 +33,22 @@
                     </a>
                 </div>
                 <div class="col-lg-6 col-6 header-menu">
-                    <form action="">
-                        <select class="select-language" name="">
-                            <option class="select-english" value="" selected>
+                    <form action="" class="animated fadeIn">
+                        <select class="select-language " name="">
+                            <option class="select-option select-english" value="" selected>
                                 English
                             </option>
-                            <option class="select-english" value="">
+                            <option class="select-option select-english" value="">
                                 Russian
                             </option>
                         </select>
-
                     </form>
+                    <div class="navbar-social d-none d-xl-flex">
+                        <a href="#" class="social-icon social-dribbble"></a>
+                        <a href="#" class="social-icon social-behance"></a>
+                        <a href="#" class="social-icon social-instagram"></a>
+                        <a href="#" class="social-icon social-linkedin"></a>
+                    </div>
                     <nav class="navbar">
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbars" aria-controls="navbars" aria-expanded="false"
@@ -51,52 +57,68 @@
                         <div class="navbar-collapse collapse" id="navbars" style="">
                             <div class="container">
                                 <div class="row">
-                                    <h4 class="border-bottom">Servises</h4>
-                                    <ul class="navbar-nav">
-                                        <li>
-                                            <a href="about.php#section-4" class="topLink">Web-development</a>
-                                        </li>
-                                        <li>
-                                            <a href="faq.php#section-5" class="topLink">Web-design</a>
-                                        </li>
-                                        <li>
-                                            <a href="review.php#section-3" class="topLink">Digital Advertis</a>
-                                        </li>
-                                    </ul>
-                                    <h4 class="border-bottom">Company</h4>
-                                    <ul class="navbar-nav">
-                                        <li>
-                                            <p class="show-js">Moscow</p>
-                                            <div class="hide-info">
-                                                <p>Web-Development</p>
-                                                <p>Search Engine Optimization</p>
-                                                <p>Digital Advertise</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <p class="show-js">Kiev</p>
-                                            <div class="hide-info">
-                                                <p>Web-Development</p>
-                                                <p>Search Engine Optimization</p>
-                                                <p>Digital Advertise</p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="d-none d-xl-flex">
+                                        <button class="btn-close collapsed" type="button" data-toggle="collapse"
+                                            data-target="#navbars" aria-controls="navbars" aria-expanded="false"
+                                            aria-label="Toggle navigation">
+                                        </button>
+                                        <div class="navbar-social">
+                                            <a href="#" class="social-icon social-dribbble"></a>
+                                            <a href="#" class="social-icon social-behance"></a>
+                                            <a href="#" class="social-icon social-instagram"></a>
+                                            <a href="#" class="social-icon social-linkedin"></a>
+                                        </div>
+                                        <form action="">
+                                            <select class="select-language" name="">
+                                                <option class="select-option select-english" value="" selected>
+                                                    English
+                                                </option>
+                                                <option class="select-option select-english" value="">
+                                                    Russian
+                                                </option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                   <div>
+                                       <h4 class="border-bottom">Servises</h4>
+                                       <ul class="navbar-nav">
+                                           <li>
+                                               <a href="about.php#section-4" class="topLink">Web-development</a>
+                                           </li>
+                                           <li>
+                                               <a href="faq.php#section-5" class="topLink">Web-design</a>
+                                           </li>
+                                           <li>
+                                               <a href="review.php#section-3" class="topLink">Digital Advertis</a>
+                                           </li>
+                                       </ul>
+                                       <h4 class="border-bottom">Company</h4>
+                                       <ul class="navbar-nav">
+                                           <li>
+                                               <p class="show-js">Moscow</p>
+                                               <div class="hide-info">
+                                                   <p>Web-Development</p>
+                                                   <p>Search Engine Optimization</p>
+                                                   <p>Digital Advertise</p>
+                                               </div>
+                                           </li>
+                                           <li>
+                                               <p class="show-js">Kiev</p>
+                                               <div class="hide-info">
+                                                   <p>Web-Development</p>
+                                                   <p>Search Engine Optimization</p>
+                                                   <p>Digital Advertise</p>
+                                               </div>
+                                           </li>
+                                       </ul>
+                                   </div>
                                     <div class="navbar-footer">
                                         <p class="copyright">© SPECTR Media 2014-2019</p>
                                         <div class="navbar-social">
-                                            <a href="#">
-                                                <img src="./img/behance.png" alt="">
-                                            </a>
-                                            <a href="#">
-                                                <img src="./img/behance.png" alt="">
-                                            </a>
-                                            <a href="#">
-                                                <img src="./img/behance.png" alt="">
-                                            </a>
-                                            <a href="#">
-                                                <img src="./img/behance.png" alt="">
-                                            </a>
+                                            <a href="#" class="social-icon social-dribbble"></a>
+                                            <a href="#" class="social-icon social-behance"></a>
+                                            <a href="#" class="social-icon social-instagram"></a>
+                                            <a href="#" class="social-icon social-linkedin"></a>
                                         </div>
                                         <a href="#" class="topLink">Privacy Policy</a>
                                     </div>
@@ -536,7 +558,7 @@
                         </li>
                         <li class="list-item">
                             <p class="name">Костя</p>
-                            <p class="text">Рассматриваем digital-маркетинг как единую систему...</p>
+                            <p class="text">Рассматриваем digital-маркетинг как единую систем...</p>
                         </li>
                         <li class="list-item">
                             <p class="name">Женя</p>
@@ -549,18 +571,10 @@
                         И расскажите о нас друзьям:
                     </p>
                     <div class="social">
-                        <a href="#">
-                            <img src="./img/facebook.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./img/vk.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./img/twitter.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./img/ok.svg" alt="">
-                        </a>
+                        <a href="#" class="social-icon social-facebook">facebook</a>
+                        <a href="#" class="social-icon social-vk">vkontakte</a>
+                        <a href="#" class="social-icon social-twitter">twitter</a>
+                        <a href="#" class="social-icon social-ok">odnoklasniki</a>
                     </div>
                 </div>
                 <button type="button" class="btn-standard modal-block" data-dismiss="modal">

@@ -1,0 +1,153 @@
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.social-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color .3s ease-in;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: background .3s ease-in;
+    }
+    
+    &:hover {
+        background-color: $accent-primary;
+    }
+}
+
+.social-facebook {
+    
+    &::before {
+        width: 10px;
+        height: 20px;
+        background-image: url("../img/facebook.svg");
+    }
+    
+    &:hover::before {
+        background-image: url("../img/facebook-active.svg");
+    }
+}
+
+
+.social-vk {
+    
+    &::before {
+        width: 22px;
+        height: 12px;
+        background-image: url("../img/vk.svg");
+    }
+    
+    &:hover::before {
+        background-image: url("../img/vk-active.svg");
+    }
+}
+
+.social-twitter {
+    
+    &::before {
+        width: 18px;
+        height: 14px;
+        background-image: url("../img/twitter.svg");
+    }
+    
+    &:hover::before {
+        background-image: url("../img/twitter-active.svg");
+    }
+}
+
+.social-ok {
+    
+    &::before {
+        width: 12px;
+        height: 20px;
+        background-image: url("../img/ok.svg");
+    }
+    
+    &:hover::before {
+        background-image: url("../img/ok-active.svg");
+    }
+}
+
+.social-behance {
+    
+    &::before {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/behance.svg");
+    }
+    
+    &:hover {
+        background-color: transparent;
+        
+        &::before {
+            background-image: url("../img/behance-active.svg");
+        }
+    }
+}
+
+.social-instagram {
+    
+    &::before {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/instagram.svg");
+    }
+    
+    &:hover {
+        background-color: transparent;
+        
+        &::before {
+            background-image: url("../img/instagram-active.svg");
+        }
+    }
+}
+
+.social-dribbble {
+    
+    &::before {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/dribbble.svg");
+    }
+    
+    &:hover {
+        background-color: transparent;
+        
+        &::before {
+            background-image: url("../img/dribbble-active.svg");
+        }
+    }
+}
+
+.social-linkedin {
+    
+    &::before {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/linkedin.svg");
+    }
+    
+    &:hover {
+        background-color: transparent;
+        
+    }
+}

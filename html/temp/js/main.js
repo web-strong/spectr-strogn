@@ -35,21 +35,22 @@ $(document).ready(function () {
         progressText.text(progress + '%');
     }
 
-    $('.navbar-toggler').on('click', function () {
+    if ($(window).outerWidth < 1366) {
+        $('.navbar-toggler').on('click', function () {
 
-        $(this).toggleClass('open');
+            $(this).toggleClass('open');
 
-        if ($(window).outerWidth() < 1023) {
-            html.toggleClass('no-scroll');
-            body.toggleClass('no-scroll');
-        }
+            if ($(window).outerWidth() < 1023) {
+                html.toggleClass('no-scroll');
+                body.toggleClass('no-scroll');
+            }
 
-        // disable scrolling in iOS mobile devices
-        if ($('body').hasClass('no-scroll')) {
-            $('body').on('touchmove', function (e) { e.preventDefault()});
-        }
-    });
-
+            // disable scrolling in iOS mobile devices
+            if ($('body').hasClass('no-scroll')) {
+                $('body').on('touchmove', function (e) { e.preventDefault()});
+            }
+        });
+    }
     var arrow = '<img src="./img/arrow-right.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
         rectangleBackground = '<img src="./img/rectangle-horizontal.svg" class="rectangle animated delay-1s" data-animation="slideInRight">',
         text = '<span class="animated delay-1s" data-animation="fadeIn">next</span>',
