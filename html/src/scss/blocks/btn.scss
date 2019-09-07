@@ -1,13 +1,18 @@
 
-.btn-close {
-
+.btn {
+    border: none;
+    outline: none;
+    
+    &:focus {
+        outline: none;
+    }
 }
 
 .btn-standard {
     display: table;
     border: none;
     outline: none;
-    background: #E60000;
+    background: $accent-primary;
     border-radius: 10px 0;
     color: #ffffff;
     align-items: center;
@@ -15,6 +20,24 @@
     cursor: pointer;
     padding: 10px 47px;
     margin: 0 auto;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 9px;
+    line-height: 11px;
+    color: #ffffff;
+    background-color: $accent-primary;
+    border-radius: 4px;
+}
+
+.btn-more {
+    color: transparentize(#000000, .45);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: transparent;
 }
 
 .btn-close {

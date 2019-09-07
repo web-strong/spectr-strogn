@@ -47,14 +47,6 @@
         margin-bottom: 20px;
         padding: 0 20% 20px 20%;
         border-bottom: 1px solid #EEEEEE;
-        
-        & a {
-            margin-right: auto;
-            
-            &:last-child {
-                margin-right: 0;
-            }
-        }
     }
     
     & .navbar-footer {
@@ -83,10 +75,6 @@
         width: 100%;
         padding: 0 20px 0 20px;
         margin-bottom: 50px;
-        
-        //&:last-child {
-        //    margin-bottom: 0;
-        //}
         
         & .show-js {
             position: relative;

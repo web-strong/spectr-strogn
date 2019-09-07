@@ -49,9 +49,9 @@ $(document).ready(function () {
         }
     });
 
-    var arrow = '<img src="./img/arrow-right.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
-        arrowLeft = '<img src="./img/arrow-left.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
-        rectangleBackground = '<img src="./img/rectangle-horizontal.svg" class="rectangle animated delay-1s" data-animation="slideInRight">',
+    var arrow = '<img src="/img/arrow-right.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
+        arrowLeft = '<img src="/img/arrow-left.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
+        rectangleBackground = '<img src="/img/rectangle-horizontal.svg" class="rectangle animated delay-1s" data-animation="slideInRight">',
         text = '<span class="animated delay-1s" data-animation="fadeIn">next</span>',
         textPrev = '<span class="animated delay-1s" data-animation="fadeIn">prev</span>',
         btnPrev = '<button type="button" class="slick-arrow slick-prev">' + arrowLeft + textPrev + rectangleBackground + '</button>',
@@ -91,6 +91,87 @@ $(document).ready(function () {
             }
         ]
     });
+
+    if ($(window).outerWidth() < 768) {
+
+        $('.slider').slick({
+            mobileFirst: true,
+            swipe: false,
+            swipeToSlide: false,
+            slidesToShow: 1,
+            dots: false,
+            arrows: true
+        });
+    }
+
+    $('.slider .slick-next').on('click', function () {
+        var activeSlide = $(this).prev().find('.slider-item.slick-active'),
+            activeSlides = activeSlide.find('.slider-img'),
+            indexActive = activeSlide.find('.slick-dots .slick-active').index();
+
+        activeSlides.each(function (index, element) {
+            if ($(element).data('slick-index') == indexActive ) {
+                $(element).addClass('slick-active');
+            }
+        });
+    });
+
+    var sliderImages = $('.slider-images')
+
+    sliderImages.on('init', function (event, slick) {
+        var currentIndex = '<span class="slider-current">' + (slick.currentSlide + 1) + '</span>',
+            length = '<span class="slider-length">' + slick.slideCount + '</span>',
+            container = '<div class="slider-counter">' + currentIndex + ' / ' + length + '</div>';
+
+        $(this).find('.slick-list').append(container);
+    });
+
+    $('.switch').on('click', function (e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            sliderImages = $this.parentsUntil('.slider-item').parent().find('.slider-images img');
+
+        sliderImages.each(function (index, element) {
+            var srcImage = $this.hasClass('switch-desktop') ? $(element).data('desktop') : $(element).data('mobile');
+
+            $(element).attr({'src' : srcImage});
+        });
+        $this.hasClass('switch-desktop') ? $this.removeClass('switch-desktop').text('MOBILE') : $this.addClass('switch-desktop').text('DESKTOP');
+    });
+
+    sliderImages.on('afterChange', function (event, slick) {
+        $(event.target).find('.slider-counter .slider-current').text(slick.currentSlide + 1);
+        $(event.target).find('.slider-counter .slider-length').text(slick.slideCount);
+    });
+
+    sliderImages.slick({
+        mobileFirst: true,
+        swipeToSlide: true,
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: true,
+                }
+            }
+        ]
+    });
+
+    $('.btn-more').on('click', function (e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            notFull = $this.parent(),
+            fullText = notFull.next();
+
+        notFull.addClass('hidden');
+        fullText.removeClass('hidden');
+    });
+
     $('.show-js').click(function () {
         var item = $(this);
         if (item.hasClass('active')) {
@@ -128,7 +209,7 @@ $(window).on('load', function () {
                 offsetTop = 700;
             }
             else if (windowWidth > 767) {
-                offsetTop = 800;
+                offsetTop = 600;
             }
             else if (windowWidth > 319) {
                 offsetTop = 450;
