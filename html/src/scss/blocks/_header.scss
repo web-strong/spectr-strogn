@@ -1,7 +1,9 @@
 header {
+    position: relative;
 	padding: 18px 0;
 	background: transparent;
 	border-bottom: 1px solid #EEEEEE;
+    z-index: 2;
 	.header-menu {
 		display: flex;
 		align-items: center;
@@ -17,11 +19,6 @@ header {
 			z-index: 20;
 		}
 	}
-	//.navbar {
-	//	padding: 0;
-	//	min-width: 60px;
-	//	height: 100%;
-	//}
 	.navbar-toggler {
 		display: block;
 		position: relative;

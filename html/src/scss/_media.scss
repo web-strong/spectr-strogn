@@ -70,9 +70,9 @@
 	.our-team .slick-arrow {
 		top: 105%;
 	}
-	.our-team .slick-dots {
-		top: 108%;
-	}
+	//.our-team .slick-dots {
+	//	top: 108%;
+	//}
 	.team_description {
 		padding: 0 20px 0 0;
 		margin-top: 15px;
@@ -127,9 +127,6 @@
 	.price {
 		margin-top: 70px;
 	}
-	.our-team {
-		margin-bottom: 140px;
-	}
 	h1 span:after {
 		right: -73px;
 		margin-top: -6px;
@@ -144,6 +141,17 @@
 		font-size: 36px;
 		line-height: 0;
 	}
+    
+    .navbar-collapse {
+        
+        & .navbar-footer {
+            font-size: 12px;
+        }
+        
+        & .navbar-social {
+            padding: 20px;
+        }
+    }
 }
 @media (min-width: 768px) {
 	.our-profile .item {
@@ -152,7 +160,18 @@
 		}
 	}
 	
-	.modal-text,
+	.our-team.reviews {
+		
+		& .d-flex p {
+			margin-left: 20px;
+		}
+		
+		& .slick-dots {
+			bottom: -28px;
+		}
+	}
+		
+		.modal-text,
 	.modal-sub-title {
 		width: 70%;
 		margin: 0 auto 10px;
@@ -205,6 +224,10 @@
 			height: 92vh;
 		}
 	}
+    
+    .our-technical-stack h4 {
+        margin-bottom: 25px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -240,10 +263,8 @@
 			position: absolute;
 			right: -10px;
 			display: flex;
-			//flex-direction: column-reverse;
 			flex-direction: row;
 			align-items: flex-start;
-			//align-items: flex-end;
 			width: auto;
 			padding-right: 0;
 			z-index: 20;

@@ -1,5 +1,6 @@
 .our-team {
 	margin-top: 70px;
+	padding-bottom: 70px;
 	.item {
 		margin: 0 15px;
 	}
@@ -27,6 +28,7 @@
 	}
 	.team_description {
 		p {
+			margin-bottom: 30px;
 			color: #727272;
 			font-size: 16px;
 			&:first-child {
@@ -42,7 +44,8 @@
 		display: flex;
 		justify-content: flex-start;
 		position: absolute;
-		top: 100%;
+		//top: 100%;
+		bottom: -58px;
 		left: 50%;
 		margin-left: -23px;
 		padding-left: 0;
@@ -86,6 +89,13 @@
 		padding: 0;
 		outline: none;
 		top: 100%;
+		
+		& .rectangle {
+			position: absolute;
+			top: 0;
+			left: 5px;
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
 	}
 	.slick-next {
 		right: 0;
@@ -102,14 +112,49 @@
 			position: absolute;
 			top: 30%;
 			left: 50%;
-			transform: translate(-50%, -50%) rotate(-90deg);
+			transform: translate(-50%, -50%);
+		}
+	}
+	.slick-prev {
+		display: none !important;
+		left: 20px;
+		background: transparent;
+		width: 115px;
+		font-family: $bold-font;
+		font-size: 16px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #000000;
+		padding: 8px 0 9px 0;
+		
+		& .arrow {
+			position: absolute;
+			top: 30%;
+			left: -10px;
+		}
+	}
+	&.reviews {
+		
+		& .d-flex {
+			margin-bottom: 20px;
+			
+			& p {
+				font-family: $bold-font;
+				font-size: 18px;
+				color: #000000;
+				margin-bottom: 0;
+			}
 		}
 		
-		& .rectangle {
-			position: absolute;
-			top: 0;
-			left: 5px;
-			transform: translate(-50%, -50%) rotate(90deg);
+		& .slick-dots {
+			left: 50%;
+			transform: translateX(-50%);
+			margin-left: 0;
+			margin-top: -2px;
+		}
+		
+		& .slick-prev {
+			display: inline-block !important;
 		}
 	}
 }

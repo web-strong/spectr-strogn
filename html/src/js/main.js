@@ -50,15 +50,18 @@ $(document).ready(function () {
     });
 
     var arrow = '<img src="./img/arrow-right.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
+        arrowLeft = '<img src="./img/arrow-left.svg" class="arrow animated delay-1s" data-animation="slideInLeft">',
         rectangleBackground = '<img src="./img/rectangle-horizontal.svg" class="rectangle animated delay-1s" data-animation="slideInRight">',
         text = '<span class="animated delay-1s" data-animation="fadeIn">next</span>',
+        textPrev = '<span class="animated delay-1s" data-animation="fadeIn">prev</span>',
+        btnPrev = '<button type="button" class="slick-arrow slick-prev">' + arrowLeft + textPrev + rectangleBackground + '</button>',
         btnNext = '<button type="button" class="slick-arrow slick-next ">' + arrow + text + rectangleBackground + '</button>';
 
     $('.team-slider').slick({
         infinite: true,
         slidesToShow: 1,
         dots: true,
-        prevArrow: '<button type="button" class="slick-arrow slick-prev"></button>',
+        prevArrow: btnPrev,
         nextArrow: btnNext,
         autoplay: true,
         autoplaySpeed: 2000
