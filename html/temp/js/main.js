@@ -100,7 +100,8 @@ $(document).ready(function () {
             swipeToSlide: false,
             slidesToShow: 1,
             dots: false,
-            arrows: true
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev">Prev</button>',
         });
     }
 
@@ -116,12 +117,12 @@ $(document).ready(function () {
         });
     });
 
-    var sliderImages = $('.slider-images')
+    var sliderImages = $('.slider-images');
 
     sliderImages.on('init', function (event, slick) {
         var currentIndex = '<span class="slider-current">' + (slick.currentSlide + 1) + '</span>',
             length = '<span class="slider-length">' + slick.slideCount + '</span>',
-            container = '<div class="slider-counter">' + currentIndex + ' / ' + length + '</div>';
+            container = '<div class="slider-counter">' + currentIndex + '/' + length + '</div>';
 
         $(this).find('.slick-list').append(container);
     });
@@ -150,15 +151,19 @@ $(document).ready(function () {
         swipeToSlide: true,
         slidesToShow: 1,
         dots: true,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 767,
-                settings: {
-                    arrows: true,
-                }
-            }
-        ]
+        arrows: false
+    });
+
+    var heart = $('.heart');
+
+    heart.on("click", function() {
+
+        var $this = $(this),
+            count = $this.parent().find('.count'),
+            likes = count.text();
+
+        $this.addClass('beating');
+        count.text(parseInt(likes, 10) + 1);
     });
 
     $('.btn-more').on('click', function (e) {

@@ -19,6 +19,7 @@
         & button {
             width: 10px;
             height: 10px;
+            padding: 0;
             background-color: #C4C4C4;
             outline: none;
             border-radius: 50%;
@@ -39,14 +40,14 @@
     }
     
     & .slick-list {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     & .slick-arrow {
         position: absolute;
         top: 0;
-        font-size: 9px;
+        font-size: 11px;
         line-height: 11px;
         background-color: transparent;
         border: none;
@@ -65,8 +66,8 @@
     }
     
     & .slick-prev {
-        left: 30px;
-        padding: 5px 5px 5px 30px;
+        left: 20px;
+        padding: 5px 5px 5px 25px;
         
         &::before {
             left: 0;
@@ -75,8 +76,8 @@
     }
     
     & .slick-next {
-        right: 30px;
-        padding: 5px 30px 5px 5px;
+        right: 20px;
+        padding: 5px 25px 5px 5px;
         
         &::before {
             right: 0;
@@ -91,7 +92,7 @@
     & .slider-counter {
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 10px;
         padding: 5px 10px;
         font-size: 14px;
         line-height: 16px;
@@ -111,7 +112,7 @@
     
     & .slick-dots {
         position: absolute;
-        bottom: -34px;
+        bottom: -35px;
         left: calc(50% + 5px);
         transform: translateX(-50%);
         
@@ -123,6 +124,7 @@
 
 .slider-header {
     display: flex;
+    align-items: center;
     width: 90%;
     margin: 0 auto 10px;
     
@@ -133,7 +135,7 @@
         margin-right: 20px;
         
         & .client-info {
-            margin-left: 10px;
+            margin-left: 5px;
         }
     }
     
@@ -155,7 +157,7 @@
     margin: 20px auto;
     
     & .slider-text {
-        margin-left: 10px;
+        margin-left: 4px;
     }
 }
 

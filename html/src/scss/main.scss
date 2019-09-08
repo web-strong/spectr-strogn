@@ -125,6 +125,10 @@ button:focus {
     z-index: 9999;
 }
 
+.hidden {
+    display: none;
+}
+
 .logo img {
     width: 100%;
     max-width: 200px;
@@ -194,6 +198,40 @@ button:focus {
         background-image: linear-gradient(to right, transparent 0%, #fff 30%);
         animation-name: displayLogo;
         animation-duration: 1s;
+    }
+}
+
+.beating {
+    animation: beating .5s 1 alternate;
+}
+
+.heart i {
+    border-width: 0 0 0 0;
+    padding: 0px;
+    outline: none;
+}
+.fa-heart-o {
+    color: black;
+    cursor: pointer;
+}
+
+.fa-heart {
+    color: rgb(236, 73, 87);
+    cursor: pointer;
+}
+
+@keyframes beating {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.25);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 

@@ -154,6 +154,13 @@
         }
     }
 }
+@media (max-width: 767px) {
+	.our-clients {
+		& .container {
+			padding: 0;
+		}
+	}
+}
 @media (min-width: 768px) {
 	.our-profile .item {
 		.img-block .name-profile p {
@@ -166,6 +173,8 @@
 		grid-template-columns: 40% 2fr 1fr;
 		grid-template-areas:
 			"slider-images slider-header slider-count"
+			"slider-images slider-footer slider-footer"
+			"slider-images slider-footer slider-footer"
 			"slider-images slider-footer slider-footer"
 			"slider-images slider-footer slider-footer";
 		margin-bottom: 50px;
@@ -196,7 +205,7 @@
 	.slider-footer {
 		grid-area: slider-footer;
 		align-items: flex-start;
-		margin: 20px 0 0 20px;
+		margin: 0 auto;
 	}
 	
 	.slider {
@@ -315,12 +324,48 @@
 		margin-left: 25px;
 	}
 	
+	.slider {
+		display: flex;
+		justify-content: space-between;
+		
+		& .slick-arrow {
+			bottom: 0;
+		}
+	}
+	
+	.slider-item {
+		display: inline-grid !important;
+		grid-template-areas:
+			"slider-images slider-header slider-header"
+			"slider-images slider-footer slider-footer"
+			"slider-images slider-footer slider-footer"
+			"slider-dots   .	 		 slider-count";
+		grid-template-columns: 55% 1fr 2fr;
+		width: 48%;
+		padding-bottom: 0;
+	}
+	
+	.slider-images .slick-dots {
+		grid-area: slider-dots;
+		position: relative;
+		transform: none;
+		bottom: -22px;
+		left: auto;
+		justify-content: center;
+}
+	
+	.slider-count {
+		justify-content: flex-end;
+		align-items: center;
+		margin-top: 0;
+	}
+	
 	.slider-header {
-		margin: 0 0 0 30px;
+		margin: 0 0 0 20px;
 	}
 	
 	.slider-footer {
-		margin: 30px 0 0 30px;
+		margin: 0 0 0 20px;
 	}
 	
 	.post-list-item {
@@ -346,37 +391,6 @@
 	
 	.our-profile .item .img-block .name-profile p {
 		font-size: 30px;
-	}
-	
-	.slider {
-		display: flex;
-		justify-content: space-between;
-		
-		& .slick-arrow {
-			bottom: 0;
-		}
-	}
-	
-	.slider-simple .slick-dots {
-		bottom: 6px;
-	}
-	
-	.slider-item {
-		display: inline-grid !important;
-		grid-template-areas:
-			"slider-images slider-header slider-header"
-			"slider-images slider-footer slider-footer"
-			"slider-images slider-footer slider-footer"
-			"slider-images .	 		 slider-count";
-		grid-template-columns: 55% 1fr 2fr;
-		width: 45%;
-		margin-bottom: 50px;
-	}
-	
-	.slider-count {
-		justify-content: flex-end;
-		align-items: flex-end;
-		margin-top: 30px;
 	}
 	
 	header {
