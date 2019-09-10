@@ -22,7 +22,7 @@
 			color: #727272;
 			font-size: 14px;
 			span {
-				font-family: $bold-font;
+				font-weight: 700;
 			}
 		}
 		input, textarea {
@@ -66,7 +66,7 @@
 		p {
 			font-size: 24px;
 			color: #000000;
-			font-family: $bold-font;
+			font-weight: 700;
 			text-align: left;
 			margin-left: 70px;
 		}
@@ -75,7 +75,7 @@
 			letter-spacing: 0.2em;
 			text-transform: uppercase;
 			color: #000000;
-			font-family: $bold-font;
+			font-weight: 700;
 			border-bottom: 1px solid #000000;
 			padding-right: 35px;
 			background: url("../img/arrow.png") no-repeat center right;
@@ -88,7 +88,7 @@
 				max-width: 40%;
 				color: #727272;
 				font-size: 18px;
-				font-family: $regular-font;
+				font-weight: 400;
 				margin-right: 20px;
 			}
 		}

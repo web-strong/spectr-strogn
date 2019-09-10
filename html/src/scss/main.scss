@@ -4,10 +4,7 @@
 $body-background: #ffffff;
 $accent-primary: #E60000;
 
-// fonts
-$regular-font: 'Gotham Pro', sans-serif;
-$medium-font: 'Gotham Pro Medium', sans-serif;
-$bold-font: 'Gotham Pro Bold', sans-serif;
+
 
 html {
     box-sizing: border-box;
@@ -21,16 +18,16 @@ html {
 
 body {
     color: #333333;
+    font-family: "Gotham Pro", sans-serif;
     font-size: 20px;
     font-weight: 400;
     background: $body-background;
-    font-family: $regular-font;
     overflow-x: hidden;
 }
 
 h1 {
-    font-family: $bold-font;
     font-size: 120px;
+    font-weight: 500;
     line-height: 92px;
     color: #000000;
     text-align: left;
@@ -56,7 +53,7 @@ h1 {
 }
 
 h2 {
-    font-family: $bold-font;
+    font-weight: 700;
     font-size: 120px;
     line-height: 86px;
     color: #000000;
@@ -65,7 +62,7 @@ h2 {
 }
 
 h3 {
-    font-family: $bold-font;
+    font-weight: 700;
     font-size: 32px;
     color: #000000;
     margin-bottom: 0;
@@ -74,7 +71,7 @@ h3 {
 }
 
 h4 {
-    font-family: $bold-font;
+    font-weight: 700;
     font-size: 24px;
     text-transform: uppercase;
     margin: 0;

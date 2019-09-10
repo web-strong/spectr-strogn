@@ -145,8 +145,20 @@
     
     .navbar-collapse {
         
+        & .navbar-nav {
+            margin-bottom: 10px;
+        }
+        
         & .navbar-footer {
             font-size: 12px;
+            
+            & .copyright {
+                padding-left: 0;
+            }
+            
+            & .topLink {
+                padding-right: 0;
+            }
         }
         
         & .navbar-social {
@@ -392,6 +404,10 @@
 	.our-profile .item .img-block .name-profile p {
 		font-size: 30px;
 	}
+    
+    .header-block .navbar-social {
+        display: flex;
+    }
 	
 	header {
 		border-bottom: none;

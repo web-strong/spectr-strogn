@@ -1,7 +1,7 @@
 .main-section {
-	min-height: 607px;
 	margin-top: 32px;
 	padding-top: 30px;
+	padding-bottom: 50px;
 	.container	{
 		position: relative;
 		.grey-block {
@@ -32,7 +32,7 @@
 		a {
 			position: relative;
 			display: inline-block;
-			font-family: $bold-font;
+			font-weight: 700;
 			color: #000000;
 			font-size: 16px;
 			text-align: center;
@@ -47,12 +47,12 @@
 			}
 			
 			& .rectangle {
-				top: 0;
+				top: 10%;
 				left: 25%;
 			}
 			
 			& .arrow {
-				top: 10%;
+				top: 25%;
 				left: 40%;
 			}
 		}
@@ -63,7 +63,7 @@
 		margin-top: 35px;
 	}
 	.btn {
-		font-family: $regular-font;
+		font-weight: 400;
 		color: #ffffff;
 		font-size: 20px;
 		background: #eb5a09;

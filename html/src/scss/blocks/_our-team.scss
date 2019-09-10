@@ -22,7 +22,7 @@
 				color: #ffffff;
 				text-transform: uppercase;
 				font-size: 18px;
-				font-family: $bold-font;
+				font-weight: 700;
 			}
 		}
 	}
@@ -32,7 +32,7 @@
 			color: #727272;
 			font-size: 16px;
 			&:first-child {
-				font-family: $bold-font;
+				font-weight: 700;
 				font-size: 18px;
 				color: #000000;
 				margin-bottom: 15px;
@@ -101,7 +101,7 @@
 		right: 0;
 		background: transparent;
 		width: 115px;
-		font-family: $bold-font;
+		font-weight: 700;
 		font-size: 16px;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
@@ -120,7 +120,7 @@
 		left: 20px;
 		background: transparent;
 		width: 115px;
-		font-family: $bold-font;
+		font-weight: 700;
 		font-size: 16px;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
@@ -139,7 +139,7 @@
 			margin-bottom: 20px;
 			
 			& p {
-				font-family: $bold-font;
+				font-weight: 700;
 				font-size: 18px;
 				color: #000000;
 				margin-bottom: 0;

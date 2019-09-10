@@ -16,6 +16,8 @@ header {
 		
 		& form {
 			position: relative;
+			display: flex;
+			align-items: center;
 			z-index: 20;
 		}
 	}
