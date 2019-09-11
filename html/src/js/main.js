@@ -33,6 +33,7 @@ $(document).ready(function () {
             body.removeClass('no-scroll');
         }
         progressText.text(progress + '%');
+        $('.preloader .logo').removeClass('hidden');
     }
 
     $('.navbar-toggler').on('click', function () {
@@ -111,7 +112,7 @@ $(document).ready(function () {
             indexActive = activeSlide.find('.slick-dots .slick-active').index();
 
         activeSlides.each(function (index, element) {
-            if ($(element).data('slick-index') == indexActive ) {
+            if ($(element).data('slick-index') == indexActive) {
                 $(element).addClass('slick-active');
             }
         });
@@ -136,7 +137,7 @@ $(document).ready(function () {
         sliderImages.each(function (index, element) {
             var srcImage = $this.hasClass('switch-desktop') ? $(element).data('desktop') : $(element).data('mobile');
 
-            $(element).attr({'src' : srcImage});
+            $(element).attr({ 'src': srcImage });
         });
         $this.hasClass('switch-desktop') ? $this.removeClass('switch-desktop').text('MOBILE') : $this.addClass('switch-desktop').text('DESKTOP');
     });
@@ -156,7 +157,7 @@ $(document).ready(function () {
 
     var heart = $('.heart');
 
-    heart.on("click", function() {
+    heart.on('click', function () {
 
         var $this = $(this),
             count = $this.parent().find('.count'),

@@ -397,6 +397,25 @@
 		font-size: 26px;
 	}
 	
+	.header-menu {
+		position: static;
+	}
+	
+	.navbar-collapse.show {
+		right: 0;
+	}
+	
+	.main-info {
+		
+		& .bg-icon {
+			display: none;
+		}
+		
+		& .hide-info {
+			display: block;
+			margin-top: 35px;
+		}
+	}
 }
 
 @media (min-width: 1366px) {
@@ -458,6 +477,10 @@
 		height: 100vh;
         transition: width .4s linear, opacity .2s linear;
 		
+		& .container {
+			position: static;
+		}
+		
 		& .row {
 			flex-direction: row;
 			
@@ -475,8 +498,11 @@
 		}
 		
 		& .navbar-footer {
+			position: absolute;
+			left: 0;
+			bottom: 20px;
 			width: 100%;
-			padding: 20px 0;
+			padding: 20px 10px;
 			
 			& .copyright {
 				width: auto;
