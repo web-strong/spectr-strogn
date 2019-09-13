@@ -418,23 +418,21 @@
 	}
 }
 
-@media (min-width: 1366px) {
-	
-	.our-profile .item .img-block .name-profile p {
-		font-size: 30px;
+@media (min-width: 1200px) {
+
+	.header-block .navbar-social {
+		display: flex;
 	}
-    
-    .header-block .navbar-social {
-        display: flex;
-    }
-	
+
+
+
 	header {
 		border-bottom: none;
-		
+
 		& .container {
 			position: relative;
 		}
-		
+
 		& .header-menu {
 			position: absolute;
 			right: -10px;
@@ -445,82 +443,89 @@
 			padding-right: 0;
 			z-index: 20;
 		}
-        
-        & .header-block {
-            position: relative;
-            right: -1px;
-            flex-direction: column-reverse;
-            justify-content: flex-end;
-            width: auto;
-            height: 100vh;
-            padding: 0 15px;
-            background-color: white;
-            
-            & .navbar-toggler {
-                margin-left: 0;
-            }
-        }
+
+		& .header-block {
+			position: relative;
+			right: -1px;
+			flex-direction: column-reverse;
+			justify-content: flex-end;
+			width: auto;
+			height: 100vh;
+			padding: 0 15px;
+			background-color: white;
+
+			& .navbar-toggler {
+				margin-left: 0;
+			}
+		}
 	}
-	
+
 	.navbar-collapse {
-        position: static;
+		position: static;
 		width: 0;
 		height: 100vh;
 		overflow-y: hidden;
 		transition: width .4s linear, opacity .2s linear;
 	}
-	
+
 	.navbar-collapse.show {
 		position: static;
 		right: -13vh;
 		width: 30vw;
 		height: 100vh;
-        transition: width .4s linear, opacity .2s linear;
-		
+		transition: width .4s linear, opacity .2s linear;
+
 		& .container {
 			position: static;
 		}
-		
+
 		& .row {
 			flex-direction: row;
-			
+
 			& h4 {
 				margin-top: 0;
 			}
-			
+
 			& .btn-close {
 				margin-left: 0;
 			}
-			
+
 			& > div:first-child {
 				flex-direction: column;
 			}
 		}
-		
+
 		& .navbar-footer {
 			position: absolute;
 			left: 0;
 			bottom: 20px;
 			width: 100%;
 			padding: 20px 10px;
-			
+
 			& .copyright {
 				width: auto;
 			}
 		}
 	}
-	
+
 	.navbar-footer .navbar-social {
 		display: none;
 	}
-	
+
 	.navbar-social {
 		flex-direction: column;
 		margin-top: 30px;
-		
+
 		& a {
 			margin-bottom: 30px;
 		}
+	}
+}
+
+@media (min-width: 1366px) {
+	
+	.our-profile .item .img-block .name-profile p {
+		font-size: 30px;
 	}
 }
 
